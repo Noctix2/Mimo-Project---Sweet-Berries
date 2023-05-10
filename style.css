@@ -1,0 +1,48 @@
+:root {
+    --light-gray: #F5F3EF;
+    --gray: #DCDCDC;
+    --dark-gray: #646464;
+    --black: #000;
+    --white: #FFF;
+    --yellow: #FEBD2F;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background: var(--light-gray);
+}
+
+/* My css */
+
+/* one for all */
+
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+
+/* nav css */
+
+nav ul {
+    grid-area: nav-ul;
+}
+
+ul {
+    list-style: none;
+}
+
+nav img {
+    grid-area: nav-img;
+}
+
+button {
+    background-color: #000;
+    color: #FFF;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    grid-area: button;
+}
