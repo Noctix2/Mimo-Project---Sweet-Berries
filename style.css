@@ -36,12 +36,23 @@ html, body {
 }
 
 .nav-wrapper {
-
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-left {
   list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-left: 10%;
+}
 
+.nav-left {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
 }
 
 .nav-logo {
@@ -49,7 +60,6 @@ html, body {
 }
 
 .nav-right {
-
 }
 
 .btn {
