@@ -31,7 +31,7 @@ html, body {
 /* nav css */
 
 .navbar {
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .nav-wrapper {
@@ -64,24 +64,24 @@ html, body {
 }
 
 .nav-right {
-  margin-left: 60px;
+  margin-left: 120px;
   grid-area: right;
-  place-self: end;
+  place-self: center;
 }
 
 .btn {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 7px;
   color: #FFF;
   background-color: #000;
-  padding: 12px 18px;
+  padding: 5px 10px;
   border-radius: 25px;
 }
 
 /* banner css */
 
 .banner-container {
-  background-color: red;
+  /* background-color: red; */
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 50% 50%;
@@ -96,12 +96,14 @@ html, body {
 .text h1 {
   font-weight: 500;
   font-size: 40px;
+  font-family: Roboto Serif;
   color: #000;
 }
 
 .text p {
   font-weight: 400;
   font-size: 10px;
+  color: #646464;
 }
 
 .image {
@@ -137,6 +139,10 @@ main {
   border-radius: 15px;
   height: 300px;
   width: 300px;
+}
+
+.card p {
+  color: #646464;
 }
 
 
