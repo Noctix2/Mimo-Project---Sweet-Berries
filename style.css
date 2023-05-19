@@ -45,12 +45,17 @@ html, body {
   list-style: none;
   font-size: 10px;
   font-weight: 500;
-  color: #000;
   display: flex;
   justify-content: space-around;
   position: relative;
   right: 50px;
   grid-area: left;
+}
+
+.nav-left a {
+  color: #000;
+  font-family: Roboto;
+  font-weight: 400;
 }
 
 .nav-logo {
@@ -119,32 +124,97 @@ html, body {
   width: 100%;
   height: auto;
   flex-shrink: 1;
+  min-width: 200px;
 }
 
 /* main css */
 
 main {
-  background-color: chartreuse;
 }
 
-.card1{
+.container-card {
+  border: solid red 2px;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-template-areas: 
+  "cardGold card2 card3"
+  "card4 card5 card6";
+  gap: 20px;
+  margin: 15px;
+}
+
+.cardGold{
   background-color: #FEBD2F;
   border-radius: 15px;
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
+  grid-area: cardGold;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: #FFF;
   border-radius: 15px;
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
+}
+
+.card-title{
+  color: #000;
+  font-family: Roboto Serif;
+  font-size: 20px;
+  line-height: 32px;
 }
 
 .card p {
   color: #646464;
+  font-size: 10px;
+  font-family: Roboto;
+  font-weight: 400;
 }
 
+.card2{
+  grid-area: card2;
+}
+
+.card3{
+  grid-area: card3;
+}
+
+.card4{
+  grid-area: card4;
+}
+
+.card5{
+  grid-area: card5;
+}
+
+.card6{
+  grid-area: card6;
+}
+
+.card-body {
+}
+
+.card-button {
+  font-weight: 500;
+  font-size: 10px;
+  font-weight: 500;
+  color: #000;
+  background-color: #FFF;
+  padding: 5px 10px;
+  border-radius: 25px;
+  border: solid 1px var(--dark-gray);
+}
+
+.card-img-top {
+  position: relative;
+  top: -15px;
+  left: 150px;
+  height: auto;
+  width: 30px; 
+}
 
 /* footer css */
 
@@ -156,4 +226,54 @@ footer {
 
 footer img {
   height: 16px;
+}
+
+/* Styles for tablet */
+
+@media (max-width: 810px) {
+  .container-card {
+    border: solid red 2px;
+    display: grid;
+    grid-template: auto / auto;
+    grid-template-areas: 
+    "cardGold card2" 
+    "card3 card4" 
+    "card5 card6";
+    gap: 20px;
+    margin: 15px;
+  }
+
+  .banner-container {
+    /* background-color: red; */
+    display: grid;
+    grid-template-areas: 
+    "text" 
+    "image";
+  }
+
+}
+
+/* Styles for the phone */
+
+@media (max-width: 375px) {
+  .container-card {
+    border: solid red 2px;
+    display: grid;
+    grid-template: auto / auto;
+    grid-template-areas: 
+    "cardGold card2" 
+    "card3 card4" 
+    "card5 card6";
+    gap: 20px;
+    margin: 15px;
+  }
+
+  .banner-container {
+    /* background-color: red; */
+    display: grid;
+    grid-template-areas: 
+    "text" 
+    "image";
+  }
+
 }
