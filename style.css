@@ -133,7 +133,7 @@ main {
 }
 
 .container-card {
-  border: solid red 2px;
+  /* border: solid red 2px; */
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   grid-template-areas: 
@@ -253,7 +253,7 @@ footer img {
 
 }
 
-/* Styles for the phone */
+/* Styles for phone */
 
 @media (max-width: 375px) {
   .container-card {
@@ -274,6 +274,15 @@ footer img {
     grid-template-areas: 
     "text" 
     "image";
+  }
+
+  .btn {
+    font-weight: 500;
+    font-size: 7px;
+    color: #FFF;
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 25px;
   }
 
 }
