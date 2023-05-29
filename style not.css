@@ -1,0 +1,289 @@
+:root {
+    --light-gray: #F5F3EF;
+    --gray: #DCDCDC;
+    --dark-gray: #646464;
+    --black: #000;
+    --white: #FFF;
+    --yellow: #FEBD2F;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background: var(--light-gray);
+}
+
+/* My css */
+
+/* one for all */
+
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+
+/* nav css */
+
+.navbar {
+  /* background-color: aqua; */
+}
+
+.nav-wrapper {
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  align-items: center;
+  grid-template-areas: "left logo right";
+}
+
+.nav-left {
+  list-style: none;
+  font-size: 10px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  right: 50px;
+  grid-area: left;
+}
+
+.nav-left a {
+  color: #000;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+.nav-logo {
+  grid-area: logo;
+  place-self: center;
+}
+
+.nav-logo img {
+  width: 73px;
+  height: auto;
+}
+
+.nav-right {
+  margin-left: 120px;
+  grid-area: right;
+  place-self: center;
+}
+
+.btn {
+  font-weight: 500;
+  font-size: 7px;
+  color: #FFF;
+  background-color: #000;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+
+/* banner css */
+
+.banner-container {
+  /* background-color: red; */
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "text image";
+}
+
+.text {
+  grid-area: text;
+  margin: 20px;
+}
+
+.text h1 {
+  font-weight: 500;
+  font-size: 40px;
+  font-family: Roboto Serif;
+  color: #000;
+}
+
+.text p {
+  font-weight: 400;
+  font-size: 10px;
+  color: #646464;
+}
+
+.image {
+  grid-area: image;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+}
+
+.image img {
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  flex-shrink: 1;
+  min-width: 200px;
+}
+
+/* main css */
+
+main {
+}
+
+.container-card {
+  /* border: solid red 2px; */
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  grid-template-areas: 
+  "cardGold card2 card3"
+  "card4 card5 card6";
+  gap: 20px;
+  margin: 15px;
+}
+
+.cardGold{
+  background-color: #FEBD2F;
+  border-radius: 15px;
+  height: 200px;
+  width: 200px;
+  grid-area: cardGold;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  border-radius: 15px;
+  height: 200px;
+  width: 200px;
+}
+
+.card-title{
+  color: #000;
+  font-family: Roboto Serif;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.card p {
+  color: #646464;
+  font-size: 10px;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
+.card2{
+  grid-area: card2;
+}
+
+.card3{
+  grid-area: card3;
+}
+
+.card4{
+  grid-area: card4;
+}
+
+.card5{
+  grid-area: card5;
+}
+
+.card6{
+  grid-area: card6;
+}
+
+.card-body {
+}
+
+.card-button {
+  font-weight: 500;
+  font-size: 10px;
+  font-weight: 500;
+  color: #000;
+  background-color: #FFF;
+  padding: 5px 10px;
+  border-radius: 25px;
+  border: solid 1px var(--dark-gray);
+}
+
+.card-img-top {
+  position: relative;
+  top: -15px;
+  left: 150px;
+  height: auto;
+  width: 30px; 
+}
+
+/* footer css */
+
+footer {
+  background-color: #FEBD2F;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer img {
+  height: 16px;
+}
+
+/* Styles for tablet */
+
+@media (max-width: 810px) {
+  .container-card {
+    /* border: solid red 2px; */
+    display: grid;
+    grid-template: auto / auto;
+    grid-template-areas: 
+    "cardGold card2" 
+    "card3 card4" 
+    "card5 card6";
+    gap: 20px;
+    margin: 15px;
+  }
+
+  .banner-container {
+    /* background-color: red; */
+    display: grid;
+    grid-template-areas: 
+    "text" 
+    "image";
+  }
+
+}
+
+/* Styles for phone */
+
+@media (max-width: 375px) {
+  .container-card {
+    /* border: solid red 2px; */
+    display: grid;
+    grid-template: auto / auto;
+    grid-template-areas: 
+    "cardGold card2" 
+    "card3 card4" 
+    "card5 card6";
+    gap: 20px;
+    margin: 15px;
+  }
+
+  .banner-container {
+    /* background-color: red; */
+    display: grid;
+    grid-template-areas: 
+    "text" 
+    "image";
+  }
+
+  .btn {
+    font-weight: 500;
+    font-size: 7px;
+    color: #FFF;
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 25px;
+  }
+
+}
